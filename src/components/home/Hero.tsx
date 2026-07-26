@@ -27,7 +27,7 @@ export default function Hero() {
 
         <Reveal delay={0.2}>
           <p className="text-base sm:text-xl text-kaasa-textMuted max-w-2xl mx-auto leading-relaxed">
-            Experience Pakistan's premier bespoke furniture design studio. Handcrafted Sheesham wood, rich velvets, and precision metal accents built to last generations.
+            Experience Pakistan&apos;s premier bespoke furniture design studio. Handcrafted Sheesham wood, rich velvets, and precision metal accents built to last generations.
           </p>
         </Reveal>
 

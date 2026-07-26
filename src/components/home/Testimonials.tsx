@@ -27,7 +27,7 @@ export default function Testimonials() {
                     ))}
                   </div>
                   <p className="text-sm text-kaasa-text leading-relaxed italic">
-                    "{t.comment}"
+                    &quot;{t.comment}&quot;
                   </p>
                 </div>
 
