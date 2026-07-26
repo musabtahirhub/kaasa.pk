@@ -10,7 +10,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 bg-kaasa-dark border-t border-kaasa-border">
+    <section id="faq" className="py-20 bg-hh-ink border-t border-hh-steel/10">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="Got Questions?"
@@ -24,26 +24,26 @@ export default function FAQ() {
             return (
               <Reveal key={index} delay={index * 0.05}>
                 <div
-                  className={`rounded-xl border transition-all duration-200 overflow-hidden ${
+                  className={`rounded-lg border transition-all duration-200 overflow-hidden ${
                     isOpen
-                      ? 'bg-kaasa-card border-kaasa-gold/40 shadow-lg'
-                      : 'bg-kaasa-card/50 border-kaasa-border hover:border-kaasa-borderHover'
+                      ? 'bg-white/5 border-hh-amber/50 shadow-lg'
+                      : 'bg-white/5 border-hh-steel/20 hover:border-hh-steel/40'
                   }`}
                 >
                   <button
                     onClick={() => setOpenIndex(isOpen ? null : index)}
-                    className="w-full p-6 text-left flex items-center justify-between gap-4 font-medium text-kaasa-text"
+                    className="w-full p-6 text-left flex items-center justify-between gap-4 font-medium text-white"
                   >
-                    <span className="text-base sm:text-lg font-heading">{faq.question}</span>
+                    <span className="text-base sm:text-lg font-sans font-semibold">{faq.question}</span>
                     <ChevronDown
-                      className={`w-5 h-5 text-kaasa-gold transition-transform duration-300 shrink-0 ${
+                      className={`w-5 h-5 text-hh-amber transition-transform duration-300 shrink-0 ${
                         isOpen ? 'rotate-180' : ''
                       }`}
                     />
                   </button>
 
                   {isOpen && (
-                    <div className="px-6 pb-6 text-sm text-kaasa-textMuted leading-relaxed border-t border-kaasa-border/40 pt-4">
+                    <div className="px-6 pb-6 text-xs sm:text-sm text-hh-steel leading-relaxed border-t border-hh-steel/10 pt-4 font-mono">
                       {faq.answer}
                     </div>
                   )}

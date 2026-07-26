@@ -1,9 +1,8 @@
 'use client';
 
 import React from 'react';
-import SectionHeading from '../shared/SectionHeading';
 import { PRODUCTS } from '@/lib/constants';
-import { ShoppingBag, Star, Check } from 'lucide-react';
+import { ShoppingBag, Star } from 'lucide-react';
 import { useCartStore } from '@/lib/store';
 import { formatPKR } from '@/lib/utils';
 import Reveal from '../shared/Reveal';
@@ -12,63 +11,73 @@ export default function FeaturedProducts() {
   const addItem = useCartStore((state) => state.addItem);
 
   return (
-    <section id="featured" className="py-24 bg-kaasa-dark border-t border-kaasa-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Curated Catalog"
-          title="Signature Furniture Pieces"
-          subtitle="Explore our hand-picked selection of luxury armchairs, handcrafted dining sets, and bespoke bedroom furniture."
-        />
+    <section id="featured" className="py-20 bg-hh-ink border-t border-hh-steel/10">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-8">
+        {/* Section Title */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+          <div>
+            <span className="font-mono text-xs text-hh-amber tracking-widest uppercase">
+              Featured Selection
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1 font-sans">
+              FEATURED CATALOG
+            </h2>
+          </div>
+          <p className="text-xs text-hh-steel max-w-md font-mono">
+            Explore our hand-crafted desk setups, luxury lighting, and bespoke furniture built to last generations.
+          </p>
+        </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* 4 Column Product Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {PRODUCTS.map((product, idx) => (
-            <Reveal key={product.id} delay={idx * 0.1}>
-              <div className="group rounded-2xl bg-kaasa-card border border-kaasa-border hover:border-kaasa-gold/50 transition-all duration-300 overflow-hidden flex flex-col h-full shadow-xl">
-                {/* Image Container */}
-                <div className="relative aspect-[4/3] overflow-hidden bg-kaasa-dark">
+            <Reveal key={product.id} delay={idx * 0.08}>
+              <div className="group rounded-lg bg-white/5 border border-hh-steel/20 hover:border-hh-amber/60 transition-all duration-300 overflow-hidden flex flex-col h-full hover:shadow-[0_10px_30px_rgba(255,138,61,0.12)]">
+                {/* Product Image */}
+                <div className="relative aspect-square overflow-hidden bg-black/40">
                   <img
                     src={product.image}
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   {product.isBestseller && (
-                    <span className="absolute top-3 left-3 bg-kaasa-gold text-kaasa-dark text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow">
+                    <span className="absolute top-3 left-3 bg-hh-amber text-hh-ink font-mono text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded shadow">
                       Bestseller
                     </span>
                   )}
                   {product.isNew && (
-                    <span className="absolute top-3 left-3 bg-emerald-500 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow">
-                      New Arrival
+                    <span className="absolute top-3 left-3 bg-emerald-500 text-white font-mono text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded shadow">
+                      New
                     </span>
                   )}
                 </div>
 
-                {/* Body */}
-                <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+                {/* Body Details */}
+                <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                   <div>
-                    <div className="flex items-center justify-between text-xs text-kaasa-textMuted mb-2">
-                      <span className="uppercase tracking-wider font-semibold text-kaasa-gold/80">{product.category}</span>
-                      <div className="flex items-center gap-1 text-amber-400 font-semibold">
-                        <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                    <div className="flex items-center justify-between text-[11px] font-mono text-hh-steel mb-1.5">
+                      <span className="uppercase tracking-wider text-hh-amber">{product.category}</span>
+                      <div className="flex items-center gap-1 text-hh-amber font-semibold">
+                        <Star className="w-3 h-3 fill-hh-amber text-hh-amber" />
                         <span>{product.rating}</span>
                       </div>
                     </div>
 
-                    <h3 className="text-lg font-heading font-semibold text-kaasa-text group-hover:text-kaasa-gold transition-colors">
+                    <h3 className="text-base font-semibold text-white group-hover:text-hh-amber transition-colors font-sans">
                       {product.name}
                     </h3>
-                    <p className="text-xs text-kaasa-textMuted mt-2 leading-relaxed line-clamp-2">
+                    <p className="text-xs text-hh-steel mt-2 leading-relaxed line-clamp-2">
                       {product.description}
                     </p>
                   </div>
 
-                  <div className="pt-4 border-t border-kaasa-border flex items-center justify-between gap-2">
+                  <div className="pt-4 border-t border-hh-steel/15 flex items-center justify-between gap-2">
                     <div>
-                      <div className="text-lg font-bold text-kaasa-gold">
+                      <div className="text-base font-mono font-bold text-hh-amber">
                         {formatPKR(product.price)}
                       </div>
                       {product.originalPrice && (
-                        <div className="text-xs text-kaasa-textMuted line-through">
+                        <div className="text-[11px] font-mono text-hh-steel line-through">
                           {formatPKR(product.originalPrice)}
                         </div>
                       )}
@@ -76,7 +85,8 @@ export default function FeaturedProducts() {
 
                     <button
                       onClick={() => addItem(product)}
-                      className="p-3 rounded-xl bg-kaasa-dark border border-kaasa-border hover:border-kaasa-gold hover:bg-kaasa-gold hover:text-kaasa-dark text-kaasa-text transition-all duration-200"
+                      className="p-2.5 rounded-md bg-white/5 border border-hh-steel/20 hover:border-hh-amber hover:bg-hh-amber hover:text-hh-ink text-hh-bone transition-all duration-200"
+                      aria-label={`Add ${product.name} to bag`}
                     >
                       <ShoppingBag className="w-4 h-4" />
                     </button>

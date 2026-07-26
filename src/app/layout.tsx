@@ -1,22 +1,30 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Outfit } from "next/font/google";
+import { Space_Grotesk, IBM_Plex_Mono, Alex_Brush } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-space-grotesk",
   display: "swap",
 });
 
-const outfit = Outfit({
+const ibmPlexMono = IBM_Plex_Mono({
+  weight: ["400", "500", "600"],
   subsets: ["latin"],
-  variable: "--font-outfit",
+  variable: "--font-ibm-plex-mono",
+  display: "swap",
+});
+
+const alexBrush = Alex_Brush({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-alex-brush",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Kaasa.pk | Bespoke Luxury Furniture & Interior Design Atelier",
-  description: "Handcrafted luxury furniture engineered with solid Sheesham wood, velvet upholstery, and gold accents across Pakistan.",
+  title: "Kaasa.pk | Bespoke Luxury Workspace & Living",
+  description: "Elevate your living space with bespoke desk decor, workspace essentials, and room lighting across Pakistan.",
 };
 
 export default function RootLayout({
@@ -25,8 +33,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${outfit.variable} scroll-smooth dark`}>
-      <body className="bg-kaasa-dark text-kaasa-text antialiased font-sans">
+    <html lang="en" className={`${spaceGrotesk.variable} ${ibmPlexMono.variable} ${alexBrush.variable} scroll-smooth dark`}>
+      <body className="bg-hh-ink text-hh-bone antialiased font-sans">
         {children}
       </body>
     </html>

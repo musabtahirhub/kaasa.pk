@@ -4,13 +4,17 @@
 
 @layer base {
   :root {
-    --background: 10 11 14;
-    --foreground: 243 244 246;
+    --hh-ink: #0E1116;
+    --hh-bone: #F5F1E8;
+    --hh-amber: #FF8A3D;
+    --hh-steel: #8B93A0;
+    --background: 14 17 22;
+    --foreground: 245 241 232;
   }
 
   body {
-    color: rgb(var(--foreground));
-    background: rgb(var(--background));
+    color: var(--hh-bone);
+    background: var(--hh-ink);
     font-feature-settings: "rlig" 1, "calt" 1;
     overflow-x: hidden;
   }
@@ -18,19 +22,21 @@
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0A0B0E;
+  background: #0E1116;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1E222D;
-  border-radius: 4px;
+  background: #232936;
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #D4AF37;
+  background: #FF8A3D;
 }
 
-.gold-border-glow {
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+.amber-glow {
+  box-shadow: 0 0 20px rgba(255, 138, 61, 0.25);
 }
+

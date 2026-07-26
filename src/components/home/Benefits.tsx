@@ -30,8 +30,8 @@ const BENEFITS = [
 
 export default function Benefits() {
   return (
-    <section id="benefits" className="py-24 bg-kaasa-card/40 border-t border-kaasa-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="benefits" className="py-20 bg-hh-ink border-t border-hh-steel/10">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-8">
         <SectionHeading
           badge="The Kaasa Promise"
           title="Why Architectural Connoisseurs Choose Us"
@@ -43,14 +43,14 @@ export default function Benefits() {
             const Icon = b.icon;
             return (
               <Reveal key={idx} delay={idx * 0.1}>
-                <div className="p-8 rounded-2xl bg-kaasa-card border border-kaasa-border hover:border-kaasa-gold/40 transition-all duration-300 space-y-4">
-                  <div className="w-12 h-12 rounded-xl bg-kaasa-gold/10 border border-kaasa-gold/20 flex items-center justify-center text-kaasa-gold">
+                <div className="p-8 rounded-lg bg-white/5 border border-hh-steel/20 hover:border-hh-amber/50 transition-all duration-300 space-y-4">
+                  <div className="w-12 h-12 rounded-lg bg-hh-amber/10 border border-hh-amber/20 flex items-center justify-center text-hh-amber">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h3 className="text-lg font-heading font-semibold text-kaasa-text">
+                  <h3 className="text-lg font-semibold text-white font-sans">
                     {b.title}
                   </h3>
-                  <p className="text-xs text-kaasa-textMuted leading-relaxed">
+                  <p className="text-xs text-hh-steel leading-relaxed">
                     {b.description}
                   </p>
                 </div>
