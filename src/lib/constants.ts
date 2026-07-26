@@ -36,105 +36,126 @@ export interface Testimonial {
 export const PRODUCTS: Product[] = [
   {
     id: '1',
-    name: 'The Royal Velvet Armchair',
-    category: 'Seating',
-    price: 85000,
-    originalPrice: 98000,
-    image: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&q=80&w=800',
-    description: 'Ergonomically designed luxury velvet armchair with hand-carved mahogany legs.',
+    name: 'RGB Minimalist Corner Floor Lamp',
+    category: 'RGB Lights',
+    price: 14500,
+    originalPrice: 17800,
+    image: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=800',
+    description: 'Smart app-controlled RGB LED corner lamp with music sync and 16M+ color ambient themes.',
     rating: 4.9,
-    reviewsCount: 28,
+    reviewsCount: 48,
     inStock: true,
     isBestseller: true,
-    material: 'Premium Velvet & Solid Mahogany',
-    dimensions: '34"W x 32"D x 38"H'
+    material: 'Anodized Aluminium & Polycarbonate',
+    dimensions: '142cm Height'
   },
   {
     id: '2',
-    name: 'Heritage Sheesham Dining Table',
-    category: 'Dining',
-    price: 145000,
-    originalPrice: 165000,
-    image: 'https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?auto=format&fit=crop&q=80&w=800',
-    description: '6-seater solid Sheesham wood dining table featuring brass inlay work.',
+    name: 'MagSafe Leather Desk Mat',
+    category: 'Desk Accessories',
+    price: 8900,
+    originalPrice: 10500,
+    image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&q=80&w=800',
+    description: 'Waterproof PU leather desk pad with built-in 15W wireless MagSafe fast charging pad.',
     rating: 5.0,
-    reviewsCount: 42,
+    reviewsCount: 62,
     inStock: true,
-    isNew: true,
-    material: 'Solid Sheesham Wood with Brass Accent',
-    dimensions: '72"L x 36"W x 30"H'
+    isBestseller: true,
+    material: 'Microfiber PU Leather',
+    dimensions: '900mm x 400mm'
   },
   {
     id: '3',
-    name: 'Aura Minimalist Bed Frame',
-    category: 'Bedroom',
-    price: 120000,
-    image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80&w=800',
-    description: 'King size upholstered bed frame with built-in ambient warm LED backlighting.',
+    name: 'Ergonomic Aluminium Dual Monitor Arm',
+    category: 'Office Desks',
+    price: 18200,
+    originalPrice: 21000,
+    image: 'https://images.unsplash.com/photo-1593062096033-9a26b09da705?auto=format&fit=crop&q=80&w=800',
+    description: 'Heavy-duty gas spring dual monitor mount supporting up to 32" screens with integrated cable management.',
     rating: 4.8,
-    reviewsCount: 19,
+    reviewsCount: 31,
     inStock: true,
-    isBestseller: true,
-    material: 'Linen Fabric & Engineered Oak',
-    dimensions: '78"W x 84"L x 48"H'
+    isNew: true,
+    material: 'Aircraft-grade Aluminium',
+    dimensions: 'Fits 17" - 32" Monitors'
   },
   {
     id: '4',
-    name: 'Kashmiri Hand-Carved Console',
-    category: 'Tables',
-    price: 68000,
-    originalPrice: 75000,
-    image: 'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&q=80&w=800',
-    description: 'Intricately carved walnut wood entry console table inspired by heritage Kashmiri motifs.',
+    name: 'Cyberpunk Mech Keycap Figurine',
+    category: 'Figures & Collectibles',
+    price: 6500,
+    originalPrice: 7500,
+    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800',
+    description: 'Hand-painted resin aesthetic desk figurine for keyboard enthusiasts and modern workspace setups.',
     rating: 4.9,
-    reviewsCount: 15,
+    reviewsCount: 27,
     inStock: true,
     isNew: true,
-    material: 'Walnut Wood',
-    dimensions: '48"W x 16"D x 32"H'
+    material: 'Premium Artisan Resin',
+    dimensions: '12cm x 8cm x 15cm'
   }
 ];
 
 export const FAQS: FAQItem[] = [
   {
-    question: 'What materials are used in Kaasa furniture?',
-    answer: 'We exclusively source premium solid hardwoods (Sheesham, Walnut, Teak), high-grade stainless steel with PVD gold coating, and top-grain Italian leather/velvet upholstery.',
+    question: 'Why should I buy from Kaasa?',
+    answer: 'We offer carefully curated room decor and lifestyle products with fast shipping across Pakistan.',
     category: 'general'
   },
   {
-    question: 'Do you deliver across all major cities in Pakistan?',
-    answer: 'Yes, we provide safe white-glove doorstep delivery and assembly across Lahore, Karachi, Islamabad, Rawalpindi, Faisalabad, and Multan.',
-    category: 'shipping'
+    question: 'What makes you different from other online stores?',
+    answer: 'We focus on aesthetic and desk setup culture. Every product is selected to fit a vibe, not just fill a catalogue.',
+    category: 'general'
   },
   {
-    question: 'Can I customize dimensions or fabrics for my order?',
-    answer: 'Absolutely! Our bespoke design atelier allows full customization of wood finishes, dimensions, and fabric selections. Contact our design experts via WhatsApp or visit our studio.',
+    question: 'Do you have a physical presence?',
+    answer: 'Contact us to visit us live and collect your orders in Lahore.',
+    category: 'general'
+  },
+  {
+    question: "What if I don't like the product after receiving it?",
+    answer: 'We offer hassle-free returns within 7 days of delivery. Just contact our support team and we will guide you through the process.',
     category: 'custom'
   },
   {
-    question: 'What warranty is offered on Kaasa products?',
-    answer: 'All furniture pieces come with a 5-year structural frame warranty and 1-year upholstery warranty covering manufacturing defects.',
+    question: 'Do you offer Cash on Delivery?',
+    answer: 'Yes, COD is available across Pakistan. Online payment via card or JazzCash is also accepted.',
+    category: 'shipping'
+  },
+  {
+    question: 'How long does delivery take?',
+    answer: 'Standard delivery across Pakistan takes 3-5 business days. Karachi, Lahore, and Islamabad orders often arrive in 2-3 days.',
+    category: 'shipping'
+  },
+  {
+    question: 'How do I contact support?',
+    answer: 'Email us at kaasapk.official@gmail.com or DM us on Instagram / Facebook @kaasa.pk — we typically respond within a few hours.',
     category: 'general'
+  },
+  {
+    question: 'My item arrived damaged. What do I do?',
+    answer: 'Please photograph the damage and email it to support@kaasa.pk within 48 hours of delivery. We will send a replacement or issue a refund.',
+    category: 'care'
   }
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: '1',
-    name: 'Ayesha Malik',
-    role: 'Interior Designer',
+    name: 'Hamza Rizvi',
+    role: 'Software Engineer & Creator',
     location: 'Gulberg, Lahore',
-    comment: 'Kaasa has redefined luxury furniture in Pakistan. The craftmanship on the Sheesham dining table exceeded my expectations.',
+    comment: 'The RGB floor lamp and desk mat completely changed the vibe of my home studio setup. Fast COD delivery to Lahore!',
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200',
     verified: true
   },
   {
     id: '2',
-    name: 'Dr. Shahzad Khan',
-    role: 'Homeowner',
+    name: 'Zainab Fatima',
+    role: 'Architect & Designer',
     location: 'DHA Phase 6, Karachi',
-    comment: 'Delivered seamlessly to Karachi. The velvet quality on the armchairs is ultra-luxurious and comfortable.',
+    comment: 'Kaasa is hands down the best store in Pakistan for desk setup culture. Quality is top-tier and packaging was spot on.',
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200',
     verified: true

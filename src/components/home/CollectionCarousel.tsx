@@ -10,32 +10,32 @@ export default function CollectionCarousel() {
   const collections = [
     {
       id: 1,
-      title: 'Living Room',
-      image: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=800&q=80',
+      title: 'Room Decor',
+      image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80',
       href: '#collections',
     },
     {
       id: 2,
-      title: 'Bedroom',
-      image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80',
+      title: 'RGB Lights',
+      image: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80',
       href: '#collections',
     },
     {
       id: 3,
-      title: 'Dining',
-      image: 'https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=800&q=80',
+      title: 'Figures & Collectibles',
+      image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80',
       href: '#collections',
     },
     {
       id: 4,
-      title: 'Decor',
-      image: 'https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?auto=format&fit=crop&w=800&q=80',
+      title: 'Bestsellers',
+      image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80',
       href: '#collections',
     },
     {
       id: 5,
-      title: 'Outdoor',
-      image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80',
+      title: 'Desk Mats',
+      image: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=800&q=80',
       href: '#collections',
     },
   ];
@@ -54,9 +54,9 @@ export default function CollectionCarousel() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <span className="font-mono text-xs text-hh-amber tracking-widest uppercase">
-              Curated Spaces
+              Curated Setup Collections
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1 font-sans">
               EXPLORE COLLECTIONS
             </h2>
           </div>
@@ -88,7 +88,7 @@ export default function CollectionCarousel() {
           {collections.map((item) => (
             <div
               key={item.id}
-              className="flex-none w-[260px] sm:w-[320px] snap-start rounded-lg overflow-hidden border border-hh-steel/20 bg-white/5 hover:border-hh-amber/50 hover:shadow-[0_10px_30px_rgba(255,138,61,0.15)] transition-all duration-300 group"
+              className="flex-none w-[240px] sm:w-[300px] snap-start rounded-lg overflow-hidden border border-hh-steel/20 bg-white/5 hover:border-hh-amber/60 hover:shadow-[0_10px_30px_rgba(255,138,61,0.18)] transition-all duration-300 group"
             >
               <Link href={item.href} className="block relative aspect-[4/5] overflow-hidden">
                 <img
@@ -96,7 +96,7 @@ export default function CollectionCarousel() {
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5">
                   <h3 className="font-mono text-sm font-semibold tracking-wider text-white uppercase group-hover:text-hh-amber transition-colors">
                     {item.title}
